@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\GiftAnimationController;
 use App\Http\Controllers\Admin\GiftController;
 use App\Http\Controllers\Admin\HostController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\TestController;
 use App\Http\Controllers\Admin\TopupController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VideoLiveController;
@@ -54,6 +55,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::post('{uid}/deposit/topup', [DepositController::class, 'storeTopup'])->name('admin.topup.deposit.store');
 
 
+    Route::get('test', [TestController::class, 'index'])->name('admin.test');
 
 
 
